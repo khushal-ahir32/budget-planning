@@ -39,6 +39,7 @@ export default defineConfig({
       },
     }),
   ],
+  base: '/budget-planning/',
   resolve: {
     alias: {
       "@": "/src",
