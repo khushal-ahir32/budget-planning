@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", sans-serif;
+  --color-background: #0f0f1a;
+  --color-foreground: #ffffff;
+  --color-card: #16213e;
+  --color-card-hover: #1b2a4a;
+  --color-card-foreground: #ffffff;
+  --color-muted: #1a1a2e;
+  --color-muted-foreground: #a0a0b8;
+  --color-primary: #e94560;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #0f3460;
+  --color-secondary-foreground: #ffffff;
+  --color-accent: #0f3460;
+  --color-accent-foreground: #ffffff;
+  --color-destructive: #e94560;
+  --color-destructive-foreground: #ffffff;
+  --color-border: #2a2a42;
+  --color-input: #0f0f1a;
+  --color-ring: #e94560;
+  --color-success: #00c897;
+  --color-warning: #f5a623;
+  --color-info: #4da6ff;
+  --color-purple: #a855f7;
+  --color-text-muted: #6b6b80;
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-background);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-secondary);
+    border-radius: 3px;
+  }
+}
+
+/* Range slider */
+.range-slider {
+  width: 100%;
+  -webkit-appearance: none;
+  height: 6px;
+  background: var(--color-background);
+  border-radius: 3px;
+  outline: none;
+}
+
+.range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(233, 69, 96, 0.4);
+}
+
+.range-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 8px rgba(233, 69, 96, 0.4);
+}
+
+/* Recharts styling */
+.recharts-default-tooltip {
+  background-color: var(--color-card) !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: 8px !important;
+}
+
+.recharts-tooltip-label {
+  color: var(--color-foreground) !important;
+}
+
+.recharts-tooltip-item {
+  color: var(--color-muted-foreground) !important;
+}

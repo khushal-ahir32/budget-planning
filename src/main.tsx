@@ -1,0 +1,22 @@
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { Toaster } from "sonner";
+import App from "./App";
+import "./index.css";
+
+createRoot(document.getElementById("root")!).render(
+  <StrictMode>
+    <App />
+    <Toaster
+      position="top-center"
+      theme="dark"
+      toastOptions={{
+        style: {
+          background: "#16213e",
+          border: "1px solid #2a2a42",
+          color: "#ffffff",
+        },
+      }}
+    />
+  </StrictMode>
+);
